@@ -1,0 +1,201 @@
+/* Base Styles and Reset */
+:root {
+    --primary-color: #FF69B4;
+    --secondary-color: #4A4A4A;
+    --background-color: #FFFFFF;
+    --text-color: #333333;
+    --spacing-unit: 1rem;
+    --border-radius: 12px;
+    --transition-speed: 0.3s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+.app-container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: var(--spacing-unit);
+}
+
+/* Typography */
+h1, h2, h3 {
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: calc(var(--spacing-unit) * 2) 0;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto var(--spacing-unit);
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-text h2 {
+    font-size: 1.8rem;
+    margin-bottom: calc(var(--spacing-unit) * 0.5);
+}
+
+.hero-text p {
+    color: var(--secondary-color);
+    font-size: 1rem;
+}
+
+/* Social Links */
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-unit);
+    margin: calc(var(--spacing-unit) * 2) 0;
+}
+
+.social-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: calc(var(--spacing-unit) * 0.8);
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: transform var(--transition-speed);
+}
+
+.social-button:hover {
+    transform: translateY(-2px);
+}
+
+.social-button.instagram {
+    background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
+}
+
+.social-button.tiktok {
+    background: #000000;
+}
+
+.social-button .icon {
+    margin-right: calc(var(--spacing-unit) * 0.5);
+}
+
+/* Media Grid */
+.media-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: calc(var(--spacing-unit) * 0.5);
+    margin: calc(var(--spacing-unit) * 2) 0;
+}
+
+.grid-item {
+    aspect-ratio: 1;
+    overflow: hidden;
+    border-radius: calc(var(--border-radius) * 0.5);
+}
+
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-speed);
+}
+
+.grid-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Call to Action */
+.cta-section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-unit);
+    margin: calc(var(--spacing-unit) * 2) 0;
+}
+
+.cta-button {
+    display: block;
+    padding: calc(var(--spacing-unit) * 0.8);
+    border-radius: var(--border-radius);
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 500;
+    transition: transform var(--transition-speed), background-color var(--transition-speed);
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    background-color: #FF1493;
+}
+
+.cta-button.schedule {
+    background-color: var(--secondary-color);
+}
+
+.cta-button.schedule:hover {
+    background-color: #333333;
+}
+
+/* Desktop Adjustments */
+@media (min-width: 768px) {
+    .app-container {
+        max-width: 1200px;
+        padding: calc(var(--spacing-unit) * 2);
+    }
+
+    .social-links {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .social-button {
+        min-width: 200px;
+    }
+
+    .media-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: var(--spacing-unit);
+    }
+
+    .cta-section {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .cta-button {
+        min-width: 250px;
+    }
+}
