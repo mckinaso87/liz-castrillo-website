@@ -1150,6 +1150,24 @@ h1, h2, h3 {
 
 /* Pricing Card Buttons */
 .pricing-card .cta-button {
+    margin-top: auto;
+    width: 100%;
+    max-width: none;
+}
+
+.pricing-card.featured .cta-button {
+    background-color: var(--accent-dark);
+    border-color: var(--accent-dark);
+    font-weight: 600;
+}
+
+.pricing-card.featured .cta-button:hover {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+/* CTA Button Base Styles */
+.cta-button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -1162,28 +1180,20 @@ h1, h2, h3 {
     text-decoration: none;
     transition: all 0.3s ease;
     width: 100%;
-    max-width: none;
-    margin: 0;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.cta-button.cta-primary {
     background-color: var(--accent-color);
     color: white;
     border: 2px solid var(--accent-color);
 }
 
-.pricing-card .cta-button:hover {
+.cta-button.cta-primary:hover {
     background-color: var(--accent-dark);
     border-color: var(--accent-dark);
     transform: translateY(-2px);
-}
-
-.pricing-card.featured .cta-button {
-    background-color: var(--accent-dark);
-    border-color: var(--accent-dark);
-    font-weight: 600;
-}
-
-.pricing-card.featured .cta-button:hover {
-    background-color: var(--accent-color);
-    border-color: var(--accent-color);
 }
 
 @media (max-width: 767px) {
