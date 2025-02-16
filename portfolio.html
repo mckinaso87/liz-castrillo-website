@@ -3,22 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lizzy Castrillo | Creadora de Contenido</title>
-    <meta name="description" content="Lizzy Castrillo - Influencer y Creadora de Contenido. Estilo de vida, moda y narrativas auténticas.">
-    
-    <!-- Preload critical assets -->
-    <link rel="preload" href="css/styles.css" as="style">
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" as="style">
+    <title>Galería | Lizzy Castrillo</title>
+    <meta name="description" content="Galería completa de contenido de Lizzy Castrillo - Influencer y Creadora de Contenido">
     
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        body {
-            padding-top: 60px;
-        }
-    </style>
 </head>
 <body>
     <div class="app-container">
@@ -32,54 +23,23 @@
                     <i class="fas fa-bars"></i>
                 </button>
                 <div class="nav-menu">
-                    <a href="index.html" class="active">Inicio</a>
-                    <a href="portfolio.html">Galería</a>
+                    <a href="index.html">Inicio</a>
+                    <a href="portfolio.html" class="active">Galería</a>
                     <a href="pricing.html">Colaboración</a>
                 </div>
             </div>
         </nav>
 
-        <!-- Hero Section -->
-        <section id="hero" class="scroll-section hero">
-            <div class="hero-content scroll-reveal">
-                <div class="profile-container">
-                    <div class="profile-image loading">
-                        <img src="assets/images/profile.jpg" 
-                             alt="Lizzy Castrillo" 
-                             loading="eager"
-                             onload="this.parentElement.classList.remove('loading')">
-                    </div>
-                </div>
-                <h1>Lizzy Castrillo</h1>
-                <p class="subtitle">Creadora de Contenido</p>
-                <div class="hero-social">
-                    <a href="https://www.instagram.com/lizzy_castrillo/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://www.tiktok.com/@lizcas77" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
-                        <i class="fab fa-tiktok"></i>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Social Links -->
-        <section class="social-links">
-            <a href="https://www.instagram.com/lizzy_castrillo/" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a href="https://www.tiktok.com/@lizcas77" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
-                <i class="fab fa-tiktok"></i>
-            </a>
-        </section>
-
-        <!-- Media Grid -->
-        <section id="work" class="scroll-section">
+        <!-- Full Gallery -->
+        <section id="gallery" class="scroll-section">
             <div class="container">
+                <h1>Galería Completa</h1>
                 <div class="media-grid">
+                    <!-- All 19 images -->
                     <div class="grid-item">
                         <img src="assets/images/content/content-1.jpg" alt="Contenido de Liz Castrillo 1" loading="lazy">
                     </div>
+                    <!-- Repeat for content-2 through content-19 -->
                     <div class="grid-item">
                         <img src="assets/images/content/content-2.jpg" alt="Contenido de Liz Castrillo 2" loading="lazy">
                     </div>
@@ -104,24 +64,42 @@
                     <div class="grid-item">
                         <img src="assets/images/content/content-9.jpg" alt="Contenido de Liz Castrillo 9" loading="lazy">
                     </div>
+                    <div class="grid-item">
+                        <img src="assets/images/content/content-10.jpg" alt="Contenido de Liz Castrillo 10" loading="lazy">
+                    </div>
+                    <div class="grid-item">
+                        <img src="assets/images/content/content-11.jpg" alt="Contenido de Liz Castrillo 11" loading="lazy">
+                    </div>
+                    <div class="grid-item">
+                        <img src="assets/images/content/content-12.jpg" alt="Contenido de Liz Castrillo 12" loading="lazy">
+                    </div>
+                    <div class="grid-item">
+                        <img src="assets/images/content/content-13.jpg" alt="Contenido de Liz Castrillo 13" loading="lazy">
+                    </div>
+                    <div class="grid-item">
+                        <img src="assets/images/content/content-14.jpg" alt="Contenido de Liz Castrillo 14" loading="lazy">
+                    </div>
+                    <div class="grid-item">
+                        <img src="assets/images/content/content-15.jpg" alt="Contenido de Liz Castrillo 15" loading="lazy">
+                    </div>
+                    <div class="grid-item">
+                        <img src="assets/images/content/content-16.jpg" alt="Contenido de Liz Castrillo 16" loading="lazy">
+                    </div>
+                    <div class="grid-item">
+                        <img src="assets/images/content/content-17.jpg" alt="Contenido de Liz Castrillo 17" loading="lazy">
+                    </div>
+                    <div class="grid-item">
+                        <img src="assets/images/content/content-18.jpg" alt="Contenido de Liz Castrillo 18" loading="lazy">
+                    </div>
+                    <div class="grid-item">
+                        <img src="assets/images/content/content-19.jpg" alt="Contenido de Liz Castrillo 19" loading="lazy">
+                    </div>
                 </div>
             </div>
         </section>
-
-        <!-- Call to Action -->
-        <section class="cta-section">
-            <a href="pricing.html" class="cta-button cta-primary">
-                <i class="fas fa-star"></i>
-                Ver Opciones de Colaboración
-            </a>
-            <a href="https://cal.com/lizcastrillo" class="cta-button cta-secondary" target="_blank" rel="noopener noreferrer">
-                <i class="fas fa-calendar-alt"></i>
-                Programar Reunión
-            </a>
-        </section>
     </div>
 
-    <!-- Minimal JavaScript for performance -->
+    <!-- JavaScript -->
     <script src="js/main.js" defer></script>
 </body>
 </html>
