@@ -412,6 +412,7 @@ h1, h2, h3 {
     gap: 1rem;
     padding: 2rem 1rem;
     text-align: center;
+    margin-bottom: 2rem;
 }
 
 .cta-button {
@@ -429,26 +430,6 @@ h1, h2, h3 {
     width: 100%;
     max-width: 300px;
     margin: 0 auto;
-}
-
-.cta-button span {
-    text-align: center;
-}
-
-.mobile-break {
-    display: none;
-}
-
-@media (max-width: 767px) {
-    .cta-button {
-        padding: 0.75rem 1rem;
-        font-size: 0.9rem;
-        min-height: 44px;
-    }
-    
-    .mobile-break {
-        display: inline;
-    }
 }
 
 .cta-button i {
@@ -480,15 +461,6 @@ h1, h2, h3 {
 }
 
 @media (max-width: 767px) {
-    .cta-button {
-        padding: 0.75rem 1rem;
-        font-size: 0.9rem;
-        white-space: normal;
-        min-height: 48px;
-    }
-}
-
-@media (max-width: 767px) {
     .cta-section {
         padding: 1.5rem 1rem;
     }
@@ -497,6 +469,7 @@ h1, h2, h3 {
         padding: 0.75rem 1rem;
         font-size: 0.9rem;
         max-width: 250px;
+        min-height: 44px;
     }
 }
 
