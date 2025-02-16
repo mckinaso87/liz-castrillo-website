@@ -407,61 +407,96 @@ h1, h2, h3 {
 }
 
 .cta-section {
-    padding: 2rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 1rem;
-    max-width: 400px;
-    margin: 0 auto;
+    padding: 2rem 1rem;
+    text-align: center;
 }
 
-/* Button Styles */
 .cta-button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 0.75rem;
-    padding: 1rem 2rem;
-    border-radius: 50px;
-    text-decoration: none;
+    gap: 0.5rem;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
     font-weight: 500;
-    transition: all 0.3s ease;
     font-size: 1rem;
-    min-width: 250px;
-    border: 2px solid var(--accent-color);
+    line-height: 1.2;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
 }
 
-.cta-button i {
-    font-size: 1.2rem;
+.cta-button span {
+    text-align: center;
 }
 
-.cta-button:hover {
-    transform: translateY(-2px);
-}
-
-.cta-button.instagram {
-    background: var(--background-primary);
-    color: var(--text-primary);
-}
-
-.cta-button.instagram:hover {
-    background: var(--accent-color);
-    color: white;
-}
-
-.cta-button.schedule {
-    background: var(--accent-color);
-    color: white;
-}
-
-.cta-button.schedule:hover {
-    background: var(--accent-dark);
+.mobile-break {
+    display: none;
 }
 
 @media (max-width: 767px) {
     .cta-button {
-        width: 100%;
+        padding: 0.75rem 1rem;
+        font-size: 0.9rem;
+        min-height: 44px;
+    }
+    
+    .mobile-break {
+        display: inline;
+    }
+}
+
+.cta-button i {
+    font-size: 1.1em;
+}
+
+.cta-primary {
+    background-color: var(--accent-color);
+    color: white;
+    border: 2px solid var(--accent-color);
+}
+
+.cta-primary:hover {
+    background-color: var(--accent-dark);
+    border-color: var(--accent-dark);
+    transform: translateY(-2px);
+}
+
+.cta-secondary {
+    background-color: transparent;
+    color: var(--accent-dark);
+    border: 2px solid var(--accent-dark);
+}
+
+.cta-secondary:hover {
+    background-color: var(--accent-dark);
+    color: white;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 767px) {
+    .cta-button {
+        padding: 0.75rem 1rem;
+        font-size: 0.9rem;
+        white-space: normal;
+        min-height: 48px;
+    }
+}
+
+@media (max-width: 767px) {
+    .cta-section {
+        padding: 1.5rem 1rem;
+    }
+    
+    .cta-button {
+        padding: 0.75rem 1rem;
+        font-size: 0.9rem;
+        max-width: 250px;
     }
 }
 
@@ -753,6 +788,106 @@ h1, h2, h3 {
 .contact-info p {
     color: var(--text-secondary);
     margin-bottom: 2rem;
+}
+
+.social-links {
+    margin-bottom: 1.5rem;
+}
+
+.instagram-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+}
+
+.instagram-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(220, 39, 67, 0.2);
+}
+
+.instagram-link i {
+    font-size: 1.3rem;
+}
+
+.contact-divider {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin: 1.5rem 0;
+    position: relative;
+}
+
+.contact-divider::before,
+.contact-divider::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    height: 1px;
+    background: var(--text-secondary);
+    opacity: 0.3;
+}
+
+.contact-divider::before {
+    right: calc(50% + 1rem);
+}
+
+.contact-divider::after {
+    left: calc(50% + 1rem);
+}
+
+.schedule-call {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: var(--background-primary);
+    color: var(--text-primary);
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 2px solid var(--accent-color);
+    font-size: 1.1rem;
+}
+
+.schedule-call:hover {
+    background: var(--accent-color);
+    color: white;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 767px) {
+    .instagram-link,
+    .schedule-call {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Contact Section Styles */
+.contact-info {
+    text-align: center;
+    padding: 4rem 1.5rem;
+    background: var(--background-secondary);
+}
+
+.contact-info h2 {
+    color: var(--text-primary);
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact-info p {
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
@@ -760,58 +895,92 @@ h1, h2, h3 {
 
 .contact-buttons {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 1rem;
-    justify-content: center;
-    flex-wrap: wrap;
-    max-width: 500px;
+    max-width: 300px;
     margin: 0 auto;
 }
 
-.contact-button {
+.contact-divider {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin: 0.5rem 0;
+    position: relative;
+}
+
+.contact-divider::before,
+.contact-divider::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    height: 1px;
+    background: var(--text-secondary);
+    opacity: 0.3;
+}
+
+.contact-divider::before {
+    right: calc(50% + 1rem);
+}
+
+.contact-divider::after {
+    left: calc(50% + 1rem);
+}
+
+.cta-button {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 0.75rem;
-    padding: 0.75rem 1.5rem;
+    padding: 1rem 2rem;
     border-radius: 50px;
     text-decoration: none;
     font-weight: 500;
     transition: all 0.3s ease;
     font-size: 1rem;
-    min-width: 200px;
-    justify-content: center;
-}
-
-.contact-button.instagram {
-    background: var(--background-primary);
-    color: var(--text-primary);
+    width: 100%;
     border: 2px solid var(--accent-color);
 }
 
-.contact-button.instagram:hover {
+.cta-button i {
+    font-size: 1.2rem;
+}
+
+.cta-button.instagram {
+    background: var(--background-primary);
+    color: var(--text-primary);
+}
+
+.cta-button.instagram:hover {
     background: var(--accent-color);
     color: white;
     transform: translateY(-2px);
 }
 
-.contact-button.schedule {
+.cta-button.schedule {
     background: var(--accent-color);
     color: white;
-    border: 2px solid var(--accent-color);
 }
 
-.contact-button.schedule:hover {
+.cta-button.schedule:hover {
     background: var(--accent-dark);
     transform: translateY(-2px);
 }
 
+.cta-button i {
+    font-size: 1.2rem;
+}
+
 @media (max-width: 767px) {
-    .contact-buttons {
-        flex-direction: column;
-        gap: 0.75rem;
+    .contact-info {
+        padding: 3rem 1rem;
     }
 
-    .contact-button {
+    .contact-buttons {
         width: 100%;
+        max-width: none;
+        padding: 0 1rem;
     }
 }
 
