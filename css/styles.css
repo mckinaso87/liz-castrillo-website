@@ -215,16 +215,17 @@ h1, h2, h3 {
 }
 
 .hero-button.secondary {
-    background: transparent;
-    color: var(--text-primary);
-    border: 2px solid var(--accent-color);
+    background: var(--violet-pastel);
+    color: white;
+    border: 2px solid var(--violet-pastel);
 }
 
 .hero-button.secondary:hover {
-    background: var(--accent-color);
+    background: var(--purple-pastel);
+    border-color: var(--purple-pastel);
     color: white;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(182, 164, 212, 0.3);
 }
 
 @media (max-width: 767px) {
@@ -1111,10 +1112,6 @@ h1, h2, h3 {
 
     .pricing-header {
         padding: 3rem 1rem 1.5rem;
-    }
-
-    .pricing-header h1 {
-        font-size: 2rem;
     }
 
     .contact-section {
