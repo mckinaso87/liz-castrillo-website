@@ -846,118 +846,6 @@ h1, h2, h3 {
     }
 }
 
-/* Contact Section Styles */
-.contact-info {
-    text-align: center;
-    padding: 4rem 1.5rem;
-    background: var(--background-secondary);
-}
-
-.contact-info h2 {
-    color: var(--text-primary);
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-}
-
-.contact-info p {
-    color: var(--text-secondary);
-    margin-bottom: 2rem;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.contact-buttons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    max-width: 300px;
-    margin: 0 auto;
-}
-
-.contact-divider {
-    color: var(--text-secondary);
-    font-size: 0.9rem;
-    margin: 0.5rem 0;
-    position: relative;
-}
-
-.contact-divider::before,
-.contact-divider::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    width: 50px;
-    height: 1px;
-    background: var(--text-secondary);
-    opacity: 0.3;
-}
-
-.contact-divider::before {
-    right: calc(50% + 1rem);
-}
-
-.contact-divider::after {
-    left: calc(50% + 1rem);
-}
-
-.cta-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.75rem;
-    padding: 1rem 2rem;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 500;
-    transition: all 0.3s ease;
-    font-size: 1rem;
-    width: 100%;
-    border: 2px solid var(--accent-color);
-}
-
-.cta-button i {
-    font-size: 1.2rem;
-}
-
-.cta-button.instagram {
-    background: var(--background-primary);
-    color: var(--text-primary);
-}
-
-.cta-button.instagram:hover {
-    background: var(--accent-color);
-    color: white;
-    transform: translateY(-2px);
-}
-
-.cta-button.schedule {
-    background: var(--accent-color);
-    color: white;
-}
-
-.cta-button.schedule:hover {
-    background: var(--accent-dark);
-    transform: translateY(-2px);
-}
-
-.cta-button i {
-    font-size: 1.2rem;
-}
-
-@media (max-width: 767px) {
-    .contact-info {
-        padding: 3rem 1rem;
-    }
-
-    .contact-buttons {
-        width: 100%;
-        max-width: none;
-        padding: 0 1rem;
-    }
-}
-
 /* Pricing Grid Styles */
 .pricing-grid {
     display: grid;
@@ -1033,19 +921,36 @@ h1, h2, h3 {
 
 .pricing-header {
     text-align: center;
-    padding: 4rem 1.5rem 2rem;
-    background: linear-gradient(to bottom, var(--background-secondary), var(--background-primary));
+    padding: 8rem 1.5rem 4rem;
+    background: var(--background-primary);
 }
 
 .pricing-header h1 {
-    font-size: 2.5rem;
     color: var(--text-primary);
-    margin-bottom: 0.5rem;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
 }
 
 .pricing-header p {
     color: var(--text-secondary);
     font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+@media (max-width: 767px) {
+    .pricing-header {
+        padding: 7rem 1rem 3rem;
+    }
+    
+    .pricing-header h1 {
+        font-size: 2rem;
+    }
+    
+    .pricing-header p {
+        font-size: 1rem;
+    }
 }
 
 .contact-section {
