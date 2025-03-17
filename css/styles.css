@@ -1406,7 +1406,16 @@ h1, h2, h3 {
     width: 100%;
 }
 
-/* Responsive adjustments for individual pricing */
+.individual-pricing .section-cta {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.individual-pricing .section-cta .cta-button {
+    font-size: 1.2rem;
+    padding: 1rem 2.5rem;
+}
+
 @media (max-width: 768px) {
     .individual-pricing {
         margin-top: 3rem;
@@ -1423,5 +1432,14 @@ h1, h2, h3 {
     .individual-pricing .pricing-card {
         max-width: 100%;
         margin-bottom: 1.5rem;
+    }
+    
+    .individual-pricing .section-cta {
+        margin-top: 2rem;
+    }
+    
+    .individual-pricing .section-cta .cta-button {
+        width: 100%;
+        max-width: 300px;
     }
 }
