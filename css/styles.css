@@ -500,26 +500,30 @@ h1, h2, h3 {
 /* Navigation Styles */
 .main-nav {
     background-color: var(--background-primary);
-    padding: 1rem;
+    padding: 0.75rem 0;
     position: fixed;
     width: 100%;
     top: 0;
+    left: 0;
     z-index: 1000;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .nav-content {
     max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 2rem;
+    box-sizing: border-box;
 }
 
 .nav-brand {
     display: flex;
     align-items: center;
+    margin-right: auto;
 }
 
 .nav-brand img {
@@ -533,6 +537,7 @@ h1, h2, h3 {
     gap: 2rem;
     margin: 0;
     padding: 0;
+    align-items: center;
 }
 
 .nav-menu a {
@@ -543,6 +548,7 @@ h1, h2, h3 {
     padding: 0.5rem 0;
     position: relative;
     transition: color 0.3s ease;
+    white-space: nowrap;
 }
 
 .nav-menu a::after {
@@ -582,9 +588,15 @@ h1, h2, h3 {
     padding: 0.5rem;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 1201px) {
     .nav-content {
-        padding: 0 1.5rem;
+        padding: 0 4rem;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    .nav-content {
+        padding: 0 2rem;
     }
 }
 
