@@ -1,37 +1,37 @@
-/* Theme Colors */
 :root {
-    /* Primary Colors */
-    --color-rose: #E8B4BD;
-    --color-rose-dark: #D399A4;
-    --color-cream: #FDF9F6;
+    --background-primary: #ffffff;
+    --background-secondary: #f5f5f5;
+    --menu-background: #faf4f5;
+    --menu-hover: #f5e6e8;
+    --text-primary: #333333;
+    --text-secondary: #666666;
+    --accent-color: #e2b4bd;
+    --accent-dark: #c89ba3;
+    --violet-pastel: #C8B6E2;  /* Soft violet */
+    --purple-pastel: #B6A4D4;  /* Muted purple */
+    --brown-pastel: #C4A484;   /* Soft earth brown */
+    --greige: #E6E2D3;         /* Greyish beige */
     
-    /* Accent Colors */
-    --color-mauve: #9B6B7E;
-    --color-mauve-light: rgba(155, 107, 126, 0.1);
+    /* Supporting Colors */
+    --cream: #F5F1E6;          /* Light cream background */
+    --mauve: #967AA1;          /* Deeper accent */
+    --sage: #B2BEA9;           /* Earthy green accent */
+    --taupe: #A68F7B;          /* Warm neutral */
     
-    /* Neutral Colors */
-    --color-slate: #2D3142;
-    --color-slate-60: rgba(45, 49, 66, 0.6);
-    --color-slate-20: rgba(45, 49, 66, 0.2);
+    /* Text Colors */
+    --text-dark: #4A4A4A;      /* Soft black for main text */
+    --text-light: #7A7A7A;     /* For secondary text */
     
-    /* Gradient Combinations */
-    --gradient-rose: linear-gradient(135deg, var(--color-rose) 0%, var(--color-rose-dark) 100%);
-    --gradient-overlay: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(253, 249, 246, 0.95) 100%);
+    /* Functional Colors */
+    --background-primary: var(--cream);
+    --background-secondary: var(--greige);
+    --accent-primary: var(--violet-pastel);
+    --accent-secondary: var(--purple-pastel);
+    --accent-tertiary: var(--brown-pastel);
     
-    /* System Variables */
-    --background-primary: var(--color-cream);
-    --background-secondary: rgba(232, 180, 189, 0.08);
-    --text-primary: var(--color-slate);
-    --text-secondary: var(--color-slate-60);
-    --accent-primary: var(--color-mauve);
-    --accent-light: var(--color-mauve-light);
-    
-    /* Component Colors */
-    --nav-background: rgba(253, 249, 246, 0.95);
-    --card-background: rgba(255, 255, 255, 0.8);
-    --card-shadow: 0 8px 32px rgba(45, 49, 66, 0.08);
-    --button-gradient: var(--gradient-rose);
-    --button-hover: var(--color-rose-dark);
+    /* Other Variables */
+    --spacing-unit: 1rem;
+    --transition-speed: 0.6s;
 }
 
 * {
@@ -47,7 +47,7 @@ html {
 body {
     font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
-    color: var(--text-primary);
+    color: var(--text-dark);
     background-color: var(--background-primary);
     overflow-x: hidden;
 }
@@ -170,57 +170,66 @@ h1, h2, h3 {
 }
 
 .hero-social a:hover {
-    color: var(--accent-primary);
+    color: var(--accent-color);
     transform: translateY(-2px);
 }
 
 /* Common Button Styles */
+.hero-button,
 .cta-button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 0.75rem;
-    padding: 1rem 2rem;
+    padding: 0.875rem 1.5rem;
     border-radius: 50px;
-    text-decoration: none;
     font-weight: 500;
+    font-size: 0.95rem;
+    text-decoration: none;
     transition: all 0.3s ease;
-    font-size: 1rem;
-    width: 100%;
-    border: 2px solid var(--accent-primary);
+    min-width: 180px;
 }
 
+.hero-button i,
 .cta-button i {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 
+/* Primary Button Style */
+.hero-button.primary,
 .cta-button.cta-primary {
-    background: var(--button-gradient);
+    background: var(--accent-color);
     color: white;
-    border: none;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 12px rgba(232, 180, 189, 0.2);
+    border: 2px solid var(--accent-color);
 }
 
+.hero-button.primary:hover,
 .cta-button.cta-primary:hover {
+    background: var(--accent-dark);
+    border-color: var(--accent-dark);
     transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(232, 180, 189, 0.3);
+    box-shadow: 0 4px 12px rgba(226, 180, 189, 0.3);
 }
 
+/* Secondary Button Style */
+.hero-button.secondary,
 .cta-button.cta-secondary {
     background: transparent;
-    color: var(--color-rose);
-    border: 2px solid var(--color-rose);
-    transition: background-color 0.3s ease, color 0.3s ease;
+    color: var(--accent-color);
+    border: 2px solid var(--accent-color);
 }
 
+.hero-button.secondary:hover,
 .cta-button.cta-secondary:hover {
-    background: var(--color-rose);
+    background: var(--accent-color);
     color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(226, 180, 189, 0.2);
 }
 
 /* Mobile Styles */
 @media (max-width: 767px) {
+    .hero-button,
     .cta-button {
         width: 100%;
         min-width: auto;
@@ -490,8 +499,7 @@ h1, h2, h3 {
 
 /* Navigation Styles */
 .main-nav {
-    background-color: var(--nav-background);
-    backdrop-filter: blur(8px);
+    background-color: var(--background-primary);
     padding: 0.75rem 0;
     position: fixed;
     width: 100%;
@@ -550,12 +558,12 @@ h1, h2, h3 {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: var(--color-rose);
+    background-color: var(--accent-primary);
     transition: width 0.3s ease;
 }
 
 .nav-menu a:hover {
-    color: var(--color-rose);
+    color: var(--accent-primary);
 }
 
 .nav-menu a:hover::after {
@@ -563,7 +571,7 @@ h1, h2, h3 {
 }
 
 .nav-menu a.active {
-    color: var(--color-rose);
+    color: var(--accent-primary);
 }
 
 .nav-menu a.active::after {
@@ -708,7 +716,7 @@ h1, h2, h3 {
 
 .collab-card.featured {
     background: linear-gradient(135deg, var(--background-secondary) 0%, var(--background-primary) 100%);
-    border: 2px solid var(--accent-primary);
+    border: 2px solid var(--accent-color);
     transform: translateY(-10px);
 }
 
@@ -734,7 +742,7 @@ h1, h2, h3 {
 
 .card-icon i {
     font-size: 1.5rem;
-    color: var(--accent-primary);
+    color: var(--accent-color);
 }
 
 .collab-card h3 {
@@ -761,7 +769,7 @@ h1, h2, h3 {
 }
 
 .features-list i {
-    color: var(--accent-primary);
+    color: var(--accent-color);
     font-size: 0.9rem;
 }
 
@@ -770,7 +778,7 @@ h1, h2, h3 {
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    background: var(--accent-primary);
+    background: var(--accent-color);
     color: white;
     padding: 1rem 2rem;
     border-radius: 50px;
@@ -866,12 +874,12 @@ h1, h2, h3 {
     text-decoration: none;
     font-weight: 500;
     transition: all 0.3s ease;
-    border: 2px solid var(--accent-primary);
+    border: 2px solid var(--accent-color);
     font-size: 1.1rem;
 }
 
 .schedule-call:hover {
-    background: var(--accent-primary);
+    background: var(--accent-color);
     color: white;
     transform: translateY(-2px);
 }
@@ -908,7 +916,7 @@ h1, h2, h3 {
 
 .pricing-card.featured {
     background: linear-gradient(135deg, var(--background-secondary) 0%, var(--background-primary) 100%);
-    border: 2px solid var(--accent-primary);
+    border: 2px solid var(--accent-color);
     transform: translateY(-10px);
 }
 
@@ -930,7 +938,7 @@ h1, h2, h3 {
 
 .price {
     font-size: 1.25rem;
-    color: var(--accent-primary);
+    color: var(--accent-color);
     font-weight: 500;
     margin-bottom: 2rem;
 }
@@ -952,7 +960,7 @@ h1, h2, h3 {
 
 .features li::before {
     content: "✓";
-    color: var(--accent-primary);
+    color: var(--accent-color);
     position: absolute;
     left: 0;
 }
@@ -1064,7 +1072,7 @@ h1, h2, h3 {
 }
 
 .back-button:hover {
-    color: var(--accent-primary);
+    color: var(--accent-color);
 }
 
 @media (max-width: 767px) {
@@ -1112,8 +1120,8 @@ h1, h2, h3 {
 }
 
 .pricing-card.featured .cta-button:hover {
-    background-color: var(--accent-primary);
-    border-color: var(--accent-primary);
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
 }
 
 /* CTA Button Base Styles */
@@ -1139,9 +1147,9 @@ h1, h2, h3 {
 }
 
 .cta-primary {
-    background-color: var(--accent-primary);
+    background-color: var(--accent-color);
     color: white;
-    border: 2px solid var(--accent-primary);
+    border: 2px solid var(--accent-color);
 }
 
 .cta-primary:hover {
@@ -1252,12 +1260,12 @@ h1, h2, h3 {
     text-decoration: none;
     font-weight: 500;
     transition: all 0.3s ease;
-    border: 2px solid var(--accent-primary);
+    border: 2px solid var(--accent-color);
     font-size: 1.1rem;
 }
 
 .schedule-call:hover {
-    background: var(--accent-primary);
+    background: var(--accent-color);
     color: white;
     transform: translateY(-2px);
 }
@@ -1338,7 +1346,7 @@ h1, h2, h3 {
     transition: all 0.3s ease;
     font-size: 1rem;
     width: 100%;
-    border: 2px solid var(--accent-primary);
+    border: 2px solid var(--accent-color);
 }
 
 .cta-button i {
@@ -1351,13 +1359,13 @@ h1, h2, h3 {
 }
 
 .cta-button.instagram:hover {
-    background: var(--accent-primary);
+    background: var(--accent-color);
     color: white;
     transform: translateY(-2px);
 }
 
 .cta-button.schedule {
-    background: var(--accent-primary);
+    background: var(--accent-color);
     color: white;
 }
 
